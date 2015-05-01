@@ -1,9 +1,21 @@
 Redis = require 'ioredis'
 durations = require 'durations'
 
+config =
+  sentinels: [(
+    host:
+      "localhost"
+    port:
+      26379
+  )]
+  name:
+    "nda"
+
+console.log "config:", config
+
 increments = 100000
 watch = durations.stopwatch()
-redis = new Redis()
+redis = new Redis(config)
 
 redis.info()
 
