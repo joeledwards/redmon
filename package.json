@@ -5,7 +5,7 @@
     "Redis",
     "Monitoring"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Joel Edwards (https://github.com/joeledwards)",
   "contributors": [
     "Joel Edwards <joeledwards@gmail.com> (https://github.com/joeledwards)"
@@ -24,11 +24,16 @@
   "directories": {
     "lib": "./lib"
   },
+  "bin": {
+    "redmon": "./bin/redmon"
+  },
   "dependencies" : {
-    "durations": ">=1.0.1 <2",
-    "ioredis": ">=1.0.13 <2",
-    "lodash": ">=3.7 <4",
-    "q": ">=1.2 <2"
+    "coffee-script": "~1",
+    "durations": "~1",
+    "express": "~4",
+    "ioredis": "~1",
+    "lodash": "~3",
+    "q": "~1"
   },
   "devDependencies": {
     "coffee-script": "~1.7.1",
@@ -41,6 +46,6 @@
     "test": "cake test"
   },
   "engines": {
-    "node": ">=0.11.16"
+    "node": ">=0.12.0"
   }
 }
